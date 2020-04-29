@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+        <!ELEMENT root (notes|exams)+>
+        <!ELEMENT notes (note)+>
+        <!ELEMENT note (entrant|specialty|date)+>
+        <!ATTLIST note noteCode CDATA #REQUIRED>
+        <!ELEMENT entrant (#PCDATA)>
+        <!ELEMENT specialty (spmark|namesp)+>
+        <!ELEMENT spmark (#PCDATA)>
+        <!ELEMENT namesp (#PCDATA)>
+        <!ELEMENT date (#PCDATA)>
+        <!ELEMENT exams (exam)+>
+        <!ELEMENT exam (score)>
+        <!ATTLIST exam nameexam CDATA #REQUIRED>
+        <!ELEMENT score (#PCDATA)>
+        ]>
+<root>
+    <notes>
+        <note noteCode="1">
+            <entrant>Роман</entrant>
+            <specialty>
+                <namesp>Инф.безопасность</namesp>
+                <spmark>210</spmark>
+            </specialty>
+            <date>01.01.2019</date>
+        </note>
+        <note noteCode="2">
+            <entrant>Иван</entrant>
+            <specialty>
+                <namesp>Биофизика</namesp>
+                <spmark>211</spmark>
+            </specialty>
+            <date>02.02.2019</date>
+        </note>
+        <note noteCode="3">
+            <entrant>Павел</entrant>
+            <specialty>
+                <namesp>Электротехнология</namesp>
+                <spmark>190</spmark>
+            </specialty>
+            <date>03.03.2019</date>
+        </note>
+    </notes>
+    <exams>
+        <exam nameexam="Физика">
+            <score>33</score>
+        </exam>
+        <exam nameexam="Математика">
+            <score>23</score>
+        </exam>
+    </exams>
+</root>
